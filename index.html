@@ -24,8 +24,12 @@
 		<input type="text" name="atsakymas" size="8">
 	</div>
 <script>
-	if (checkbox1.checked == true) {
+	function myFunction(){
+		var hasBeenChecked = document.getElementById("checkbox1");
 
+		if (hasBeenChecked.checked == true) {
+			atsakymas.text.display("Turetu vesti atsakyma");
+		}
 	}
 </script>
 
