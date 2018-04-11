@@ -12,23 +12,30 @@
 </head>
 
 <body>
-	<label><input type="radio" name="checkbox1" onClick = "myFunction()">Keliniai</label>
-	<label><input type="radio" name="checkbox2">Deriniai</label>
-	<label><input type="radio" name="checkbox3">Gretiniai</label>
+	<form>
+		<input type="radio" name="radioButton" onClick="myFunction()">Kėliniai
+		<input type="radio" name="radioButton" id="check1">Deriniai
+		<input type="radio" name="radioButton" id="check2">Gretiniai
+	</form>
+
 	<div>
 		<span>N narys: </span>
 		<input type="text" name="reiksme_n" size="8">
 		<span>K narys: </span>
 		<input type="text" name="reiksme_k" size="8">
 		<span>Rezultatas: </span>
-		<input type="text" name="atsakymas" size="8">
-	</div>
+		<p id = "text" style = "display: none">Labas</p>
+	</div>	
 <script>
 	function myFunction(){
-		var hasBeenChecked = document.getElementById("checkbox1");
+		var hasBeenChecked = document.getElementById("check1");
+		var text = document.getElementById("text");
 
 		if (hasBeenChecked.checked == true) {
-			atsakymas.text.display("Turetu vesti atsakyma");
+			text.style.display = "block";
+			document.getElementById("text").innerHTML = 5 + 9;
+		} else {
+			text.style.display = "none";
 		}
 	}
 </script>
